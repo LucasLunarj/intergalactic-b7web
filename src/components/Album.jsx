@@ -8,7 +8,7 @@ import { Modal } from './Modal'
 
 export const Album = () => {
     const [images, setImages] = useState([
-        { id: 1, picture: './intergalactic-b7web/src/assets/1.jpg' },
+        { id: 1, picture: 'process.env.PUBLIC_URL+/src/assets/1.jpg' },
         { id: 2, picture: '/src/assets/2.jpg' },
         { id: 3, picture: '/src/assets/3.jpg' },
         { id: 4, picture: '/src/assets/4.jpg' },
