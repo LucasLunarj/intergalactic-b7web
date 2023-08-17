@@ -4,13 +4,13 @@ import { useState } from 'react'
 
 import { Modal } from './Modal'
 
-
+import picture2 from '../../../intergalactic-b7web/src/assets/2.jpg'
 
 export const Album = () => {
     const [images, setImages] = useState([
         { id: 1, picture: 'process.env.PUBLIC_URL+/src/assets/1.jpg' },
-        { id: 2, picture: '/src/assets/2.jpg' },
-        { id: 3, picture: '/src/assets/3.jpg' },
+        { id: 2, picture: { picture2 } },
+        { id: 3, picture: '/src/assets/3.JPG' },
         { id: 4, picture: '/src/assets/4.jpg' },
         { id: 5, picture: '/src/assets/5.jpg' },
         { id: 6, picture: '/src/assets/6.jpg' },
