@@ -3,7 +3,7 @@ export const ImageBox = (props) => {
         <>
             <div >
 
-                <img className="" src={props.img} alt="" />
+                <img className="hover:opacity-80 px-2 " onClick={props.switchImage} src={props.img} alt="" />
             </div >
         </>
     )

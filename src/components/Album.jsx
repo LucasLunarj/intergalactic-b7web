@@ -2,6 +2,7 @@
 import { useState } from 'react'
 //components
 import { ImageBox } from '../components/ImageBox'
+import { Modal } from '../components/Modal'
 //IMAGES
 import picture1 from '../assets/1.jpg'
 import picture2 from '../assets/2.jpg'
@@ -27,15 +28,38 @@ export const Album = () => {
         { id: 9, picture: picture9 },
     ])
 
+    const [switchButton, setSwitchButton] = useState(false)
+    const [individualImg, setIndividualImg] = useState([])
+
+    function handleSwitch() {
+        if (switchButton === false) {
+            setSwitchButton(true)
+        } else {
+            setSwitchButton(false)
+        }
+    }
+
+    function handleIndividualImg(img, id) {
+        setIndividualImg(images.filter((item) => item.id == id))
+    }
+
+    console.log(individualImg)
+
     return (
         <>
-            <div>
+            <div className='h-full w-full bg-black'>
                 <div>
+                    <div>
+                        {switchButton === true ? individualImg.map((item) => <Modal key={item.id} modalImg={item.picture} />) : null}
+                    </div>
                     <h1 className="text-white text-center text-4xl py-8 ">Fotos Intergalacticas</h1>
                     <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 cursor-pointer ">
                         {images.map((item) => {
-                            return <ImageBox key={item.id} img={item.picture} />
-                        })}
+                            return <div key={item.id} onClick={() => handleIndividualImg(item.picture, item.id)}>
+                                <ImageBox key={item.id} img={item.picture} switchImage={handleSwitch} />
+                            </div>
+                        })
+                        }
                     </div>
                 </div>
             </div>
