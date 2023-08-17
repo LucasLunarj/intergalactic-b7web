@@ -4,11 +4,11 @@ import { useState } from 'react'
 
 import { Modal } from './Modal'
 
-import picture2 from '../../../intergalactic-b7web/src/assets/2.jpg'
+import picture2 from '../../dist/assets/1.jpg'
 
 export const Album = () => {
     const [images, setImages] = useState([
-        { id: 1, picture: 'process.env.PUBLIC_URL+/src/assets/1.jpg' },
+        { id: 1, picture: '/dist/assets/1.jpg' },
         { id: 2, picture: { picture2 } },
         { id: 3, picture: '/src/assets/3.JPG' },
         { id: 4, picture: '/src/assets/4.jpg' },
@@ -34,7 +34,7 @@ export const Album = () => {
         setIndividualImg(images.filter((item) => item.id == id))
     }
 
-    console.log(individualImg[0])
+    console.log(individualImg)
 
     return (
         <>
