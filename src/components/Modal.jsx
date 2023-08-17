@@ -1,5 +1,5 @@
 SVGUnitTypes
-import styles from '../Modal/Modal.module.css'
+
 export const Modal = (props) => {
     return (
         <div >
