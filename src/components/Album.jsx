@@ -9,7 +9,7 @@ import picture1 from '../../dist/public/1.jpg'
 export const Album = () => {
     const [images, setImages] = useState([
         { id: 1, picture: '/dist/assets/1.jpg' },
-        { id: 2, picture: { picture2 } },
+        { id: 2, picture: { picture1 } },
         { id: 3, picture: '/src/assets/3.JPG' },
         { id: 4, picture: '../../dist/public/1.jpg' },
         { id: 5, picture: '/src/assets/5.jpg' },
