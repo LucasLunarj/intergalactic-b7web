@@ -2,30 +2,21 @@
 import { useState } from 'react'
 //components
 import { ImageBox } from '../components/ImageBox'
-import { Modal } from '../components/Modal'
-//IMAGES
-import picture1 from '../assets/1.jpg'
-import picture2 from '../assets/2.jpg'
-import picture3 from '../assets/3.jpg'
-import picture4 from '../assets/4.jpg'
-import picture5 from '../assets/5.jpg'
-import picture6 from '../assets/6.jpg'
-import picture7 from '../assets/7.jpg'
-import picture8 from '../assets/8.jpg'
-import picture9 from '../assets/9.jpg'
+import { Modal } from './Modal/Modal'
+
 
 
 export const Album = () => {
     const [images, setImages] = useState([
-        { id: 1, picture: picture1 },
-        { id: 2, picture: picture2 },
-        { id: 3, picture: picture3 },
-        { id: 4, picture: picture4 },
-        { id: 5, picture: picture5 },
-        { id: 6, picture: picture6 },
-        { id: 7, picture: picture7 },
-        { id: 8, picture: picture8 },
-        { id: 9, picture: picture9 },
+        { id: 1, picture: '/intergalactic-b7web/src/assets/1.jpg' },
+        { id: 2, picture: '/intergalactic-b7web/src/assets/2.jpg' },
+        { id: 3, picture: '/intergalactic-b7web/src/assets/3.jpg' },
+        { id: 4, picture: '/intergalactic-b7web/src/assets/4.jpg' },
+        { id: 5, picture: '/intergalactic-b7web/src/assets/5.jpg' },
+        { id: 6, picture: '/intergalactic-b7web/src/assets/6.jpg' },
+        { id: 7, picture: '/intergalactic-b7web/src/assets/7.jpg' },
+        { id: 8, picture: '/intergalactic-b7web/src/assets/8.jpg' },
+        { id: 9, picture: '/intergalactic-b7web/src/assets/9.jpg' },
     ])
 
     const [switchButton, setSwitchButton] = useState(false)
@@ -43,20 +34,20 @@ export const Album = () => {
         setIndividualImg(images.filter((item) => item.id == id))
     }
 
-    console.log(individualImg)
+    console.log(individualImg[0])
 
     return (
         <>
-            <div className='h-full w-full bg-black'>
+            <div >
                 <div>
-                    <div>
-                        {switchButton === true ? individualImg.map((item) => <Modal handleSwitch={handleSwitch} key={item.id} modalImg={item.picture} />) : null}
+                    <div className=''>
+                        {switchButton === true ? <Modal handleSwitch={handleSwitch} modalImg={individualImg[0].picture} /> : null}
                     </div>
                     <h1 className="text-white text-center text-4xl py-8 ">Fotos Intergalácticas</h1>
-                    <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 cursor-pointer">
+                    <div className=" grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 cursor-pointer ">
                         {images.map((item) => {
                             return <div key={item.id} onClick={() => handleIndividualImg(item.picture, item.id)}>
-                                <ImageBox key={item.id} img={item.picture} switchImage={handleSwitch} />
+                                <img src={item.picture} onClick={handleSwitch} alt="" />
                             </div>
                         })
                         }
