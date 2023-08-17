@@ -8,15 +8,15 @@ import { Modal } from './Modal/Modal'
 
 export const Album = () => {
     const [images, setImages] = useState([
-        { id: 1, picture: './intergalactic-b7web/src/assets/1.jpg' },
-        { id: 2, picture: './intergalactic-b7web/src/assets/2.jpg' },
-        { id: 3, picture: './intergalactic-b7web/src/assets/3.jpg' },
-        { id: 4, picture: './intergalactic-b7web/src/assets/4.jpg' },
-        { id: 5, picture: './intergalactic-b7web/src/assets/5.jpg' },
-        { id: 6, picture: './intergalactic-b7web/src/assets/6.jpg' },
-        { id: 7, picture: './intergalactic-b7web/src/assets/7.jpg' },
-        { id: 8, picture: './intergalactic-b7web/src/assets/8.jpg' },
-        { id: 9, picture: './intergalactic-b7web/src/assets/9.jpg' },
+        { id: 1, picture: '/src/assets/1.jpg' },
+        { id: 2, picture: '/src/assets/2.jpg' },
+        { id: 3, picture: '/src/assets/3.jpg' },
+        { id: 4, picture: '/src/assets/4.jpg' },
+        { id: 5, picture: '/src/assets/5.jpg' },
+        { id: 6, picture: '/src/assets/6.jpg' },
+        { id: 7, picture: '/src/assets/7.jpg' },
+        { id: 8, picture: '/src/assets/8.jpg' },
+        { id: 9, picture: '/src/assets/9.jpg' },
     ])
 
     const [switchButton, setSwitchButton] = useState(false)
