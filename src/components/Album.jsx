@@ -1,7 +1,7 @@
 //hooks
 import { useState } from 'react'
 //components
-import { ImageBox } from '../components/ImageBox'
+
 import { Modal } from './Modal/Modal'
 
 
