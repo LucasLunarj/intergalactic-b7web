@@ -52,7 +52,7 @@ export const Album = () => {
                     <div>
                         {switchButton === true ? individualImg.map((item) => <Modal handleSwitch={handleSwitch} key={item.id} modalImg={item.picture} />) : null}
                     </div>
-                    <h1 className="text-white text-center text-4xl py-8 ">Fotos Intergalacticas</h1>
+                    <h1 className="text-white text-center text-4xl py-8 ">Fotos Intergalácticas</h1>
                     <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 cursor-pointer">
                         {images.map((item) => {
                             return <div key={item.id} onClick={() => handleIndividualImg(item.picture, item.id)}>
