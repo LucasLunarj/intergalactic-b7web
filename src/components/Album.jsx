@@ -10,14 +10,14 @@ import { Modal } from './Modal'
 export const Album = () => {
     const [images, setImages] = useState([
         { id: 1, picture: '1.jpg?url' },
-        { id: 2, picture: '/2.jpg?url' },
-        { id: 3, picture: '/3.jpg?url' },
-        { id: 4, picture: '/4.jpg?url' },
-        { id: 5, picture: '/5.jpg?url' },
-        { id: 6, picture: '/6.jpg?url' },
-        { id: 7, picture: '/7.jpg?url' },
-        { id: 8, picture: '/8.jpg?url' },
-        { id: 9, picture: '/9.jpg?url' },
+        { id: 2, picture: '2.jpg?url' },
+        { id: 3, picture: '3.jpg?url' },
+        { id: 4, picture: '4.jpg?url' },
+        { id: 5, picture: '5.jpg?url' },
+        { id: 6, picture: '6.jpg?url' },
+        { id: 7, picture: '7.jpg?url' },
+        { id: 8, picture: '8.jpg?url' },
+        { id: 9, picture: '9.jpg?url' },
     ])
 
     const [switchButton, setSwitchButton] = useState(false)
